@@ -1,5 +1,5 @@
-{
-  "destinations": [
+
+  let destinations= [
     {
       "id": 1,
       "name": "Moon Base Alpha",

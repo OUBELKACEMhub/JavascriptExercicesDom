@@ -435,7 +435,6 @@ let destinations =[
 
 
 
-spaceData =loadData();
 
 
 
@@ -564,7 +563,7 @@ function calculateRevenueByDestination() {
     for(let elm of destinations){
         const object={
             name:elm.name,
-            price:elm.basePrice;
+            price:elm.basePrice
         }
         tab.push(object);
     }
@@ -574,10 +573,15 @@ function calculateRevenueByDestination() {
 // CHALLENGE 12: Find which user has made the most bookings
 // NO RESTRICTION You are encouraged to use map, filter, reduce, and Object.keys/Object.values/Object.entries where appropriate.
 function findUserWithMostBookings() {
+    let max=0;
+    // let mx=bookings.find(Element=>Element.totalBookings);
   users.forEach(elm=>{
-    if()
+      if(elm.totalBookings>max){
+        max=elm.totalBookings;   
+      }
+     
   })
-
+ return  users.find(elmet=>elmet.totalBookings==max);
 }
 
 // CHALLENGE 13: Find bookings between specific dates
@@ -629,8 +633,8 @@ async function testAllChallenges() {
     console.log('\nLEVEL 3:');
     console.log('11. Money per destination:', calculateRevenueByDestination());
     console.log('12. Most bookings by:', findUserWithMostBookings());
-    console.log('13. March bookings:', filterBookingsByDate('2024-03-01', '2024-04-01'));
-    console.log('14. All passenger names:', getAllPassengerNames());
+    // console.log('13. March bookings:', filterBookingsByDate('2024-03-01', '2024-04-01'));
+    // console.log('14. All passenger names:', getAllPassengerNames());
     
     // Try adding a new booking
     try {
