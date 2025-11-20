@@ -550,8 +550,8 @@ return tab;
 // CHALLENGE 10: Update a booking's status
 // RESTRICTION use Only for, while, and standard logic.
 function updateBookingStatus(bookingId, newStatus) {
-    
-    
+    const b=bookings.find(elm=>elm.id==bookingId);
+    b.status=newStatus;    
 }
 
 
