@@ -560,14 +560,23 @@ function updateBookingStatus(bookingId, newStatus) {
 function calculateRevenueByDestination() {
     // We want an object that shows total revenue for each destination:
     // { 'Moon Base Alpha': 195000, 'Mars Colony One': 250000 }
-   
-
+    const tab=[];
+    for(let elm of destinations){
+        const object={
+            name:elm.name,
+            price:elm.basePrice;
+        }
+        tab.push(object);
+    }
+    return tab;
 }
 
 // CHALLENGE 12: Find which user has made the most bookings
 // NO RESTRICTION You are encouraged to use map, filter, reduce, and Object.keys/Object.values/Object.entries where appropriate.
 function findUserWithMostBookings() {
-  
+  users.forEach(elm=>{
+    if()
+  })
 
 }
 
